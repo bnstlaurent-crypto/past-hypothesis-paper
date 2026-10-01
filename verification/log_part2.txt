@@ -1,0 +1,6 @@
+[PASS] Theorem constants: 4*sqrt2*delta = eps/2; 2/delta = 226.27 (paper 227); 5/delta = 565.69 (paper 566); 48/t^2 = 19200; (1-pi/4)-0.1 = 0.1146; sqrt(0.114)=0.3376 > 0.32
+[PASS] Nontriviality threshold: smallest n with non-trivial bound = 25  (paper said ~24 -> corrected to 25)
+[PASS] Optimistic-constants threshold: needs n >= 19  (paper said 15 -> corrected to 19)
+[PASS] MPS chi=2 ray dimension (paper: 8n-10): n=3: 14; n=4: 22; n=5: 30; n=6: 38; n=7: 46; n=8: 54
+[PASS] MPS threshold (paper: n>=7): first n with N-1 > 2d: 7
+[PASS] Product threshold (paper: n>=5): first n with N-1>4n is 5

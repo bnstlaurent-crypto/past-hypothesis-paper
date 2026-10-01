@@ -1,0 +1,63 @@
+[PASS] Lemma 1 fibre: readings keep the profile; any same-profile state is a reading
+[PASS] Locality preserved: V^dag H V = H for V in Gamma
+[PASS] Lemma A1 Hel<=D: max(Hel-D) over random+adversarial search = -2.19e-08
+[PASS] Lemma A2 exact identity at small N: N=2,s=0.0: 0.7842±0.0013 vs 0.7854; N=2,s=0.5: 0.8338±0.0009 vs 0.8353; N=2,s=0.9: 0.9552±0.0002 vs 0.9550; N=3,s=0.0: 0.7883±0.0010 vs 0.7854 ...
+[PASS] Lemma A2 derivation steps (Rice mean, Laplace transform, Pfaff): all three identities hold to 1e-12 at s=0.1,0.4,0.7,0.95
+[PASS] Lemma A2 G>=0, F convex, F(1)=4/pi: min G = 0.00e+00; Taylor coefficients positive; F(1)=1.273239544735 vs 4/pi=1.273239544735
+[PASS] Chord bound F(x) <= 4/pi-(4/pi-1)(1-x): holds on a 200k-point grid
+[PASS] Lemma A3 Lipschitz in U (bound 2): max observed ratio 0.642
+[PASS] Lemma A3 Lipschitz in states (bound sqrt2): max observed ratio 0.714
+[PASS] Lemma A4 ingredients: D subadditive on products; D = |r-r'|/2 for qubits; D <= Euclidean distance
+[PASS] Lemma A4 MPS telescoping: ||psi - psi~|| <= sum of isometry distances (300 random chains)
+[PASS] Theorem constants: 4*sqrt2*delta = eps/2; 2/delta = 226.27 (paper 227); 5/delta = 565.69 (paper 566); 48/t^2 = 19200; (1-pi/4)-0.1 = 0.1146; sqrt(0.114)=0.3376 > 0.32
+[PASS] Nontriviality threshold: smallest n with non-trivial bound = 25  (paper said ~24 -> corrected to 25)
+[PASS] Optimistic-constants threshold: needs n >= 19  (paper said 15 -> corrected to 19)
+[PASS] MPS chi=2 ray dimension (paper: 8n-10): n=3: 14; n=4: 22; n=5: 30; n=6: 38; n=7: 46; n=8: 54
+[PASS] MPS threshold (paper: n>=7): first n with N-1 > 2d: 7
+[PASS] Product threshold (paper: n>=5): first n with N-1>4n is 5
+[PASS] Chaos check n=8 (GUE 0.600, GOE 0.536, Poisson 0.386): mean level-spacing ratio <r> = 0.587
+[PASS] Chaos check n=10 (GUE 0.600, GOE 0.536, Poisson 0.386): mean level-spacing ratio <r> = 0.599
+[FAIL] Ground-state bounce entanglement range (caption says 0.03-0.32): actual range 0.075-0.318 bits   <-- genuine error in the paper; corrected in this version
+[FAIL] Table 1 perturbed n=3: recomputed 0.00 (0.00-0.01) vs paper 0.00 (0.00-0.02)   <-- genuine error in the paper; corrected in this version
+[PASS] Table 1 perturbed n=4: recomputed 0.27 (0.06-0.48) vs paper 0.27 (0.06-0.48)
+[FAIL] Table 1 perturbed n=5: recomputed 0.32 (0.18-0.74) vs paper 0.32 (0.19-0.74)   <-- genuine error in the paper; corrected in this version
+[PASS] Table 1 perturbed n=6: recomputed 0.57 (0.18-0.59) vs paper 0.57 (0.18-0.59)
+[PASS] Table 1 perturbed n=7: recomputed 0.77 (0.67-0.78) vs paper 0.77 (0.67-0.78)
+[PASS] Table 1 n=8 (no failure up to 0.82): 12 records, 0 failures, largest bounce entanglement tested 0.821
+[PASS] Table 1 ground n=3: 12/36 vs paper 12/36
+[PASS] Table 1 ground n=4: 14/36 vs paper 14/36
+[PASS] Table 1 ground n=5: 29/36 vs paper 29/36
+[PASS] Table 1 ground n=6: 30/36 vs paper 30/36
+[PASS] Table 1 ground n=7: 36/36 vs paper 36/36
+[PASS] Table 1 ground n=8: 6/6
+[PASS] Table 2 MPS ground n=5: 6/9 vs paper 6/9
+[PASS] Table 2 MPS ground n=6: 9/9 vs paper 9/9
+[PASS] Table 2 MPS ground n=7: 12/12 vs paper 12/12
+[PASS] Table 2 MPS ground n=8: 6/6 vs paper 6/6
+[PASS] Lemma robust: history reproduced uniformly in s: spread of D over s = 4.4e-16
+[PASS] Prop ETH-A inequality chain: holds for 20,000 random envelope/correlation profiles
+
+--- ETH table (deterministic rerun) ---
+n=8 (0s, 24 pairs): mean Hel^2 actual 0.1723 | mean |actual - Haar formula| 0.0150 | mean |actual - ETH model| 0.0093 | mean coarse Hel^2 0.02418 | coarse/actual 0.129
+n=9 (2s, 24 pairs): mean Hel^2 actual 0.1624 | mean |actual - Haar formula| 0.0212 | mean |actual - ETH model| 0.0072 | mean coarse Hel^2 0.03043 | coarse/actual 0.156
+n=10 (13s, 24 pairs): mean Hel^2 actual 0.1508 | mean |actual - Haar formula| 0.0090 | mean |actual - ETH model| 0.0042 | mean coarse Hel^2 0.01325 | coarse/actual 0.092
+
+--- Rival floor n=4,5 (deterministic rerun) ---
+n=4 local: rival floor (lowest per-site entropy of any rival found) = [np.float64(0.056), np.float64(0.042)] ([40, 40] starts)
+n=4 haar : rival floor (lowest per-site entropy of any rival found) = [np.float64(0.084), np.float64(0.035)] ([40, 40] starts)
+n=5 local: rival floor (lowest per-site entropy of any rival found) = [np.float64(0.136), np.float64(0.076)] ([40, 40] starts)
+n=5 haar : rival floor (lowest per-site entropy of any rival found) = [np.float64(0.227), np.float64(0.065)] ([40, 40] starts)
+
+--- Table 2 perturbed MPS n=5,6 (rerun) ---
+n=5 seed=1: θ=0.1(L0=0.01):RIVAL  θ=0.2(L0=0.03):RIVAL  θ=0.3(L0=0.06):RIVAL  θ=0.45(L0=0.12):RIVAL
+n=5 seed=2: θ=0.1(L0=0.01):RIVAL  θ=0.2(L0=0.03):RIVAL  θ=0.3(L0=0.07):RIVAL  θ=0.45(L0=0.12):RIVAL
+n=5 seed=3: θ=0.1(L0=0.01):RIVAL  θ=0.2(L0=0.03):RIVAL  θ=0.3(L0=0.06):RIVAL  θ=0.45(L0=0.13):RIVAL
+n=6 seed=1: θ=0.1(L0=0.02):ok  θ=0.2(L0=0.06):ok  θ=0.3(L0=0.14):RIVAL  θ=0.45(L0=0.27):RIVAL
+n=6 seed=2: θ=0.1(L0=0.02):ok  θ=0.2(L0=0.07):ok  θ=0.3(L0=0.15):ok  θ=0.45(L0=0.28):RIVAL
+n=6 seed=3: θ=0.1(L0=0.02):ok  θ=0.2(L0=0.06):ok  θ=0.3(L0=0.13):RIVAL  θ=0.45(L0=0.27):RIVAL
+
+--- Remark 1 example (rerun) ---
+non-local weight: generic H 2.92e-34, commensurable H 2.79e-05
+generic, t<=1e3             : median distance of random torus point to history = 0.408 (min 0.214)
+generic, t<=1e5             : median distance of random torus point to history = 0.193 (min 0.146)
+commensurable, one period   : median distance of random torus point to history = 0.527 (min 0.338)

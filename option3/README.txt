@@ -1,0 +1,1 @@
+Option 3 numerics. adv.py: adversarial worst-case search (usage in header). adv12b.py: 12-qubit search on saved eigenvectors (run adv.py-style diagonalisation first; the eigenvector file is 268 MB and not included). multiseed.log, cold.log: raw outputs behind Table 7. 12-qubit results: 0.92, 0.87 (seed 101) and 0.89, 0.93 (seed 202).

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.out
+*.synctex.gz
+*.toc
+
+# NOTE: deliberately no "*.log" rule. The .log files in this repo are
+# experiment output (option3/cold.log, option3/multiseed.log,
+# option3/low*.log, verification/verification_log.txt), not LaTeX logs.
+# A blanket *.log would silently drop raw results.
+
+# Unpacked raw data (ships as past_hypothesis_raw_results.tar.gz)
+verification/*.jsonl
+
+# Large intermediates not distributed (see option3/README.txt)
+*.npy.large
+eigvecs*.npy
+
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
